@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <SeekBar
+        android:id="@+id/sbRed"
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="306dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@android:color/holo_red_light"
+        android:max="255"
+        android:progress="128"
+        android:thumb="@android:drawable/btn_star_big_on"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/sbGreen"
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="306dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/holo_green_dark"
+        android:max="255"
+        android:progress="128"
+        app:layout_constraintEnd_toEndOf="@+id/sbRed"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/sbRed"
+        app:layout_constraintTop_toBottomOf="@id/sbRed" />
+
+    <SeekBar
+        android:id="@+id/sbBlue"
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="306dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@android:color/holo_blue_light"
+        android:max="255"
+        android:progress="128"
+        app:layout_constraintEnd_toEndOf="@+id/sbGreen"
+        app:layout_constraintStart_toStartOf="@+id/sbGreen"
+        app:layout_constraintTop_toBottomOf="@id/sbGreen" />
+
+    <View
+        android:id="@+id/viewColorBoard"
+        android:layout_width="306dp"
+        android:layout_height="138dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="@+id/sbBlue"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/sbBlue"
+        app:layout_constraintTop_toBottomOf="@+id/sbBlue" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="258dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/viewColorBoard"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="@+id/viewColorBoard"
+        app:layout_constraintTop_toBottomOf="@+id/viewColorBoard" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
